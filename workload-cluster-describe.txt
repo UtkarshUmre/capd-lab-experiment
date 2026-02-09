@@ -1,0 +1,229 @@
+// k describe cluster my-capd-cluster 
+
+Name:         my-capd-cluster
+Namespace:    default
+Labels:       cluster.x-k8s.io/cluster-name=my-capd-cluster
+              topology.cluster.x-k8s.io/owned=
+Annotations:  <none>
+API Version:  cluster.x-k8s.io/v1beta1
+Kind:         Cluster
+Metadata:
+  Creation Timestamp:  2026-02-09T11:36:09Z
+  Finalizers:
+    cluster.cluster.x-k8s.io
+  Generation:        3
+  Resource Version:  4271
+  UID:               84cc8a73-66e6-41cb-92fd-cd58801a52eb
+Spec:
+  Cluster Network:
+    Pods:
+      Cidr Blocks:
+        192.168.0.0/16
+    Service Domain:  cluster.local
+    Services:
+      Cidr Blocks:
+        10.128.0.0/12
+  Control Plane Endpoint:
+    Host:  172.18.0.3
+    Port:  6443
+  Control Plane Ref:
+    API Version:  controlplane.cluster.x-k8s.io/v1beta1
+    Kind:         KubeadmControlPlane
+    Name:         my-capd-cluster-x6g99
+    Namespace:    default
+  Infrastructure Ref:
+    API Version:  infrastructure.cluster.x-k8s.io/v1beta1
+    Kind:         DockerCluster
+    Name:         my-capd-cluster-7vcwb
+    Namespace:    default
+  Topology:
+    Class:  quick-start
+    Control Plane:
+      Metadata:
+      Replicas:  1
+    Variables:
+      Name:   imageRepository
+      Value:  
+      Name:   etcdImageTag
+      Value:  
+      Name:   coreDNSImageTag
+      Value:  
+      Name:   podSecurityStandard
+      Value:
+        Audit:    restricted
+        Enabled:  true
+        Enforce:  baseline
+        Warn:     restricted
+    Version:      v1.33.0
+    Workers:
+      Machine Deployments:
+        Class:  default-worker
+        Metadata:
+        Name:      md-0
+        Replicas:  0
+Status:
+  Conditions:
+    Last Transition Time:  2026-02-09T11:36:10Z
+    Message:               Scaling up control plane to 1 replicas (actual 0)
+    Reason:                ScalingUp
+    Severity:              Warning
+    Status:                False
+    Type:                  Ready
+    Last Transition Time:  2026-02-09T11:36:10Z
+    Message:               Waiting for control plane provider to indicate the control plane has been initialized
+    Reason:                WaitingForControlPlaneProviderInitialized
+    Severity:              Info
+    Status:                False
+    Type:                  ControlPlaneInitialized
+    Last Transition Time:  2026-02-09T11:36:10Z
+    Message:               Scaling up control plane to 1 replicas (actual 0)
+    Reason:                ScalingUp
+    Severity:              Warning
+    Status:                False
+    Type:                  ControlPlaneReady
+    Last Transition Time:  2026-02-09T11:36:12Z
+    Status:                True
+    Type:                  InfrastructureReady
+    Last Transition Time:  2026-02-09T11:36:09Z
+    Status:                True
+    Type:                  TopologyReconciled
+  Infrastructure Ready:    true
+  Observed Generation:     3
+  Phase:                   Provisioned
+  v1beta2:
+    Conditions:
+      Last Transition Time:  2026-02-09T11:36:09Z
+      Message:               * RemoteConnectionProbe: Remote connection probe failed
+* ControlPlaneAvailable: Control plane not yet initialized
+      Observed Generation:   3
+      Reason:                NotAvailable
+      Status:                False
+      Type:                  Available
+      Last Transition Time:  2026-02-09T11:36:09Z
+      Message:               Remote connection probe failed
+      Observed Generation:   3
+      Reason:                ProbeFailed
+      Status:                False
+      Type:                  RemoteConnectionProbe
+      Last Transition Time:  2026-02-09T11:36:12Z
+      Message:               
+      Observed Generation:   3
+      Reason:                Ready
+      Status:                True
+      Type:                  InfrastructureReady
+      Last Transition Time:  2026-02-09T11:36:10Z
+      Message:               Control plane not yet initialized
+      Observed Generation:   3
+      Reason:                NotInitialized
+      Status:                False
+      Type:                  ControlPlaneInitialized
+      Last Transition Time:  2026-02-09T11:36:09Z
+      Message:               Control plane not yet initialized
+      Observed Generation:   3
+      Reason:                NotAvailable
+      Status:                False
+      Type:                  ControlPlaneAvailable
+      Last Transition Time:  2026-02-09T11:36:11Z
+      Message:               
+      Observed Generation:   3
+      Reason:                Available
+      Status:                True
+      Type:                  WorkersAvailable
+      Last Transition Time:  2026-02-09T11:36:09Z
+      Message:               
+      Observed Generation:   3
+      Reason:                ReconcileSucceeded
+      Status:                True
+      Type:                  TopologyReconciled
+      Last Transition Time:  2026-02-09T11:36:10Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NotRollingOut
+      Status:                False
+      Type:                  RollingOut
+      Last Transition Time:  2026-02-09T11:36:10Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NotRemediating
+      Status:                False
+      Type:                  Remediating
+      Last Transition Time:  2026-02-09T11:36:10Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NotScalingDown
+      Status:                False
+      Type:                  ScalingDown
+      Last Transition Time:  2026-02-09T11:36:15Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NotScalingUp
+      Status:                False
+      Type:                  ScalingUp
+      Last Transition Time:  2026-02-09T11:36:15Z
+      Message:               * Machine my-capd-cluster-x6g99-9q6gh:
+  * InfrastructureReady:
+    * ContainerProvisioned: WaitingForBootstrapData
+    * BootstrapExecSucceeded: Condition not yet reported
+  * NodeHealthy: Waiting for Cluster control plane to be initialized
+  * Control plane components: Waiting for Cluster control plane to be initialized
+  * EtcdMemberHealthy: Waiting for Cluster control plane to be initialized
+      Observed Generation:   3
+      Reason:                NotReady
+      Status:                False
+      Type:                  ControlPlaneMachinesReady
+      Last Transition Time:  2026-02-09T11:36:10Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NoReplicas
+      Status:                True
+      Type:                  WorkerMachinesReady
+      Last Transition Time:  2026-02-09T11:36:10Z
+      Message:               
+      Observed Generation:   3
+      Reason:                UpToDate
+      Status:                True
+      Type:                  ControlPlaneMachinesUpToDate
+      Last Transition Time:  2026-02-09T11:36:10Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NoReplicas
+      Status:                True
+      Type:                  WorkerMachinesUpToDate
+      Last Transition Time:  2026-02-09T11:36:09Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NotPaused
+      Status:                False
+      Type:                  Paused
+      Last Transition Time:  2026-02-09T11:36:09Z
+      Message:               
+      Observed Generation:   3
+      Reason:                NotDeleting
+      Status:                False
+      Type:                  Deleting
+    Control Plane:
+      Available Replicas:   0
+      Desired Replicas:     1
+      Ready Replicas:       0
+      Replicas:             1
+      Up To Date Replicas:  1
+    Workers:
+      Available Replicas:   0
+      Desired Replicas:     0
+      Ready Replicas:       0
+      Replicas:             0
+      Up To Date Replicas:  0
+Events:
+  Type    Reason               Age                    From                         Message
+  ----    ------               ----                   ----                         -------
+  Normal  TopologyCreate       4m33s                  topology/cluster-controller  Created DockerCluster "default/my-capd-cluster-7vcwb"
+  Normal  Pending              4m33s                  cluster-controller           Cluster my-capd-cluster is Pending
+  Normal  TopologyCreate       4m33s                  topology/cluster-controller  Created DockerMachineTemplate "default/my-capd-cluster-lbshm"
+  Normal  TopologyCreate       4m33s                  topology/cluster-controller  Created KubeadmControlPlane "default/my-capd-cluster-x6g99"
+  Normal  TopologyUpdate       4m33s                  topology/cluster-controller  Updated Cluster "default/my-capd-cluster"
+  Normal  TopologyCreate       4m33s                  topology/cluster-controller  Created DockerMachineTemplate "default/my-capd-cluster-md-0-5tmfc"
+  Normal  TopologyCreate       4m33s                  topology/cluster-controller  Created KubeadmConfigTemplate "default/my-capd-cluster-md-0-lpdc2"
+  Normal  TopologyCreate       4m33s                  topology/cluster-controller  Created MachineDeployment "default/my-capd-cluster-md-0-55w4k"
+  Normal  Provisioning         4m32s (x2 over 4m32s)  cluster-controller           Cluster my-capd-cluster is Provisioning
+  Normal  InfrastructureReady  4m30s (x2 over 4m30s)  cluster-controller           Cluster my-capd-cluster InfrastructureReady is now True
+  Normal  Provisioned          4m30s (x2 over 4m30s)  cluster-controller           Cluster my-capd-cluster is Provisioned
